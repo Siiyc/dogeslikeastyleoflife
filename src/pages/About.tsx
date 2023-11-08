@@ -19,23 +19,7 @@ const About = () => {
   // ];
 
   //const usedAPIs: string[] = ["Dog API", "Wikipedia", "PetFinder"];
-
-  // interface forLists {
-  //   name: string;
-  //   content: string[];
-  // }
-
-  // const lists: forLists[] = [
-  //   {
-  //     name: "tools",
-  //     content: usedTools,
-  //   },
-  //   {
-  //     name: "apis",
-  //     content: usedAPIs,
-  //   },
-  // ];
-
+  
   return (
     <div
       className="lg:flex lg:items-center lg:flex-col
