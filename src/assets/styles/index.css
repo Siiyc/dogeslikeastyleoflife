@@ -1,0 +1,114 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=IBM+Plex+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.home-page-background {
+  background-position: 33% 50%;
+}
+
+.screen {
+  height: calc(100vh - 2.5rem);
+}
+
+.min-h-screen {
+  min-height: calc(100vh - 2.5rem);
+}
+
+.max-h-screen {
+  max-height: calc(100vh - 2.5rem);
+}
+
+@media (min-width: 1024px) {
+  .screen {
+    height: calc(100vh - 3rem);
+  }
+  .min-h-screen {
+    min-height: calc(100vh - 3rem);
+  }
+  .max-h-screen {
+    max-height: calc(100vh - 3rem);
+  }
+}
+
+@media (min-width: 1536px) {
+  .screen {
+    height: calc(100vh - 3.5em);
+  }
+  .min-h-screen {
+    min-height: calc(100vh - 3.5em);
+  }
+  .max-h-screen {
+    max-height: calc(100vh - 3.5rem);
+  }
+}
+
+.checkbox:checked + label .ball {
+  transform: translateX(32px);
+}
+
+@media (min-width: 1536px) {
+  .checkbox:checked + label .ball {
+    transform: translateX(36px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .moon {
+    position: absolute;
+    padding-right: 3px;
+    color: transparent;
+    transition: all 0.4s ease-in-out;
+  }
+  .sun {
+    transition: all 0.4s ease-in-out;
+  }
+  .checkbox:checked + label .sun {
+    color: transparent;
+  }
+
+  .checkbox:checked + label .moon {
+    color: #f1c40f;
+  }
+}
+
+.searchResult::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes filters {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.filters {
+  animation: filters 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.filters.right {
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.tooltipText,
+.tooltipText::after {
+  position: absolute;
+  top: -0.15rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0));
+}
+
+.tooltipText {
+  --translate-y: -100%;
+}
+
+.arrow {
+  transform: translateY(calc(-100% + 0.3rem));
+}
